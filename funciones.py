@@ -3,6 +3,9 @@ pacientes = []
 
 # Función para mostrar el menú
 def mostrar_menu():
+    """
+    Funcion imprime menu con opciones, no retorna hasta no llamar la funcion en modulo main.py
+    """
     print("\nMenú Interactivo - Sistema de Gestión de Pacientes")
     print("1. Cargar pacientes")
     print("2. Mostrar lista de pacientes")
@@ -118,7 +121,7 @@ def pacientes_mas_cinco_dias():
         print("No hay pacientes registrados.")
         return
     
-    cantidad = 0  # 
+    cantidad = 0   
     for paciente in pacientes:
         if paciente[4] > 5:
             cantidad += 1 
@@ -141,5 +144,5 @@ def promedio_dias_internacion():
         total_dias += paciente[4]  
         cantidad_pacientes += 1  
     
-    promedio = total_dias / cantidad_pacientes  # Calculamos el promedio
+    promedio = total_dias / cantidad_pacientes 
     print(f"Promedio de días de internación: {promedio:.2f}")
